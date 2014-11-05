@@ -1,4 +1,6 @@
-UITableView-Header-Grouped-By-Date
+UITableView Header Grouped By Date
 ==================================
 
-Example project of how core data can group the UITableView section headers with dates
+Very basic example using CoreData to group the UITableView Section Header's with the NSDate
+
+Might be useful to someone.
