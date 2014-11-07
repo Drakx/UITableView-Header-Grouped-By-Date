@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B2A221E7-A045-4558-A289-73F158EA7EE6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GroupDates</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>01B31527874FED6247641D53DB07FC13B77D6D12</key>
+		<string>github.com:Drakx/UITableView-Header-Grouped-By-Date.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GroupDates.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>01B31527874FED6247641D53DB07FC13B77D6D12</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Drakx/UITableView-Header-Grouped-By-Date.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>01B31527874FED6247641D53DB07FC13B77D6D12</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01B31527874FED6247641D53DB07FC13B77D6D12</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UITableView-Header-Grouped-By-Date</string>
+		</dict>
+	</array>
+</dict>
+</plist>

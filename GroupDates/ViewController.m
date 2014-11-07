@@ -34,19 +34,25 @@
 #pragma mark - UITableView Datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return [[self.fetchedResultsController sections] count];
+    NSInteger count = [[self.fetchedResultsController sections] count];
+    
+    return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+    NSInteger count = [sectionInfo numberOfObjects];
+    
+    return count;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
      id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo name]; // Should be grouped by date here
+    NSString *name = [sectionInfo name]; // Should be grouped by date here
+    
+    return name;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -113,7 +119,7 @@
     // add 24 hours to the date
     NSDate *now = [NSDate date];
     int daysToAdd = 1;
-    NSDate *newDate1 = [now dateByAddingTimeInterval:60*60*24*daysToAdd];
+    NSDate *newDate1 = [now dateByAddingTimeInterval:60 * 60 * 24 * daysToAdd];
 
     [newManagedObject setValue:newDate1 forKey:@"dates"];
     
@@ -128,13 +134,13 @@
 #pragma mark - Fetched results controller
 - (NSFetchedResultsController *)fetchedResultsController {
     
-    [NSFetchedResultsController deleteCacheWithName:@"Master"];
-    
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [NSFetchedResultsController deleteCacheWithName:@"Master"];
+    
     // Edit the entity name as appropriate.
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
@@ -153,7 +159,7 @@
     // nil for section name key path means "no sections".
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                                 managedObjectContext:self.managedObjectContext
-                                                                                                  sectionNameKeyPath:@"sectionTitle" // Call our property
+                                                                                                  sectionNameKeyPath:@"sectionName" // Call our property
                                                                                                            cacheName:@"Master"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;

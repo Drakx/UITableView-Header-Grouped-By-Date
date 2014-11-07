@@ -13,6 +13,6 @@
 @interface Entity : NSManagedObject
 
 @property (nonatomic, retain) NSDate * dates;
-@property (nonatomic, readonly) NSString *sectionTitle;
+@property (readonly) NSString *sectionName;
 
 @end

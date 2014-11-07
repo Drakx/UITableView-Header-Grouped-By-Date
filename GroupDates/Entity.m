@@ -11,7 +11,7 @@
 
 @implementation Entity
 
-@dynamic dates;
+@synthesize dates = _dates;
 
 
 -(NSDate *)dateWithOutTime:(NSDate *)date {
@@ -26,16 +26,17 @@
 }
 
 
--(NSString *)sectionTitle {
+-(NSString *)sectionName {
     
-    /*
-     *  This method is being called all the time
-     */
+    // Tom Curley (really good mate of mine) did the fix
+    // All credits to him. Thanks Tom!
+    // 07/11/2014
     
-    self.dates = [self dateWithOutTime:self.dates];
+    _dates = [self dateWithOutTime:_dates];
     
-    return [NSDateFormatter localizedStringFromDate:self.dates dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
-
+    NSString *str = [NSDateFormatter localizedStringFromDate:_dates dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+    
+    return str;
 }
 
 
